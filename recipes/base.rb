@@ -135,9 +135,9 @@ ruby_block "set-env-java-home" do
   end
 end
 
-execute "make minidump_stackwalk" do
+execute "make breakpad" do
   cwd "/home/socorro/source"
-  command "/usr/bin/make minidump_stackwalk"
+  command "/usr/bin/make breakpad"
   creates "/home/socorro/source/stackwalk"
   user "root"
   action :run
